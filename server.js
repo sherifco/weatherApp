@@ -35,10 +35,11 @@ app.get('/all', (req, res) => {
 
 //POST Route
 app.post('/', (req, res) => {
-    projectData.temperature = req.body.temp
-    projectData.date = req.body.date
-    projectData.userResponse = req.body.feelings
-    console.log(projectData)
+    projectData = {
+        temperature: req.body.temp,
+        date: req.body.date,
+        userResponse: req.body.feelings
+    }
 })
 
 
